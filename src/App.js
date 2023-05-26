@@ -24,12 +24,12 @@ function App() {
   const drop = (e) => {
     const copyListItems = [...list];
     const dragItemContent = copyListItems[startItem.current];
-    const that=copyListItems[dragOverItem.current];
-    console.log(that)
+    const removeItem=copyListItems[dragOverItem.current];
+    console.log(removeItem)
     console.log(dragItemContent)
-    copyListItems.splice(startItem.current, 1,that);
+    copyListItems.splice(startItem.current, 1,removeItem);
    // console.log( copyListItems.splice(startItem.current, 1))
-   //copyListItems.splice(startItem.current,0,that);
+   //copyListItems.splice(startItem.current,0,removeItem);
     copyListItems.splice(dragOverItem.current, 1, dragItemContent);
   //  copyListItems.splice(dragOverItem.current, 1);
   
